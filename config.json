@@ -1,10 +1,10 @@
 {
-  "serverName": "Fill server name here",
-  "serverIp": "example.com",
-  "bedrockPort": 19132,
+  "serverName": "GoldCraft",
+  "serverIp": "GoldCraft5.aternos.me:23974",
+  "bedrockPort": 23974,
   "bedrockPlayersCanJoin": true, 
-  "discordLink": "https://discord.gg/S763GafZPR",
-  "logoPath": "logo.jpg",
-  "defaultColour": "red",
+  "discordLink": "https://discord.gg/VvT4v67J3",
+  "logoPath": "Block_of_Gold_JE6_BE3.png",
+  "defaultColour": "yellow",
   "_defaultColourHelp": "Choose red, blue, yellow, purple, white, pink, or orange."
 }
