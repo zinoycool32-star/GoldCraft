@@ -1,0 +1,39 @@
+{
+  "_help": "site.json = how the site behaves: the menu bar, which pages are switched on, the game mode cards and the homepage extras (live numbers, live chat). The store itself is in store.json; the server name, IP and Discord link are in config.json.",
+
+  "floatingNavbar": false,
+  "_floatingNavbarHelp": "true = the top navbar floats over the page as a rounded bar. false = normal sticky navbar.",
+
+  "enableStoreButton": true,
+  "_enableStoreButtonHelp": "true = shows the Store button in the navbar. false = hides it.",
+
+  "pages": {
+    "_help": "Turn whole pages on or off. A page that is off disappears from every menu and link.",
+    "ranks": true,
+    "coins": true,
+    "keys": true
+  },
+
+  "gameModes": ["survival", "lifesteal", "ffa", "economy"],
+  "_gameModesHelp": "Which game-mode cards show in the Server features section on the homepage. Available: survival, lifesteal, ffa, economy.",
+
+  "hero": {
+    "_help": "'liveStats' shows the player and Discord counters under the IP box. Set it or the 'discord' block to false to hide that piece.",
+    "liveStats": true,
+    "discord": {
+      "_help": "Live Discord member count. It uses the Discord link from config.json - leave inviteCode empty to use that link, or paste just the invite code (e.g. S763GafZPR) to use a different invite.",
+      "enabled": true,
+      "inviteCode": "",
+      "refreshSeconds": 300
+    }
+  },
+
+  "liveChat": {
+    "_help": "The live chat card on the homepage. It reads secret.json (plugin URL + secret) and shows live Minecraft chat, players online and server uptime. Set enabled to false to hide the card.",
+    "enabled": true,
+    "title": "Live chat",
+    "subtitle": "What players are saying in-game right now, refreshed automatically.",
+    "refreshSeconds": 12,
+    "maxMessages": 40
+  }
+}

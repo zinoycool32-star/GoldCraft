@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecting…</title>
+<script>
+/* Fallback for hosts without URL rewrites.
+   /store/ranks, /store/coins, /store/keys and /store/<page>/<item> open store.html with the right page (and item). */
+(function(){
+  var path=location.pathname.replace(/\/index\.html?$/i,"/");
+  var store=path.match(/\/store(?:\/([^\/]+))?(?:\/([^\/]+))?\/?$/i);
+  if(!store) return;
+  var base=path.replace(/\/store(?:\/.*)?$/i,"/");
+  /* /store with no page is the browse-all page */
+  var page=store[1]||"all";
+  var query="page="+encodeURIComponent(page);
+  if(store[2]) query+="&item="+encodeURIComponent(store[2]);
+  location.replace(base+"store.html?"+query);
+})();
+</script>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0a0a0c;color:#f4f4f6;
+  font-family:system-ui,sans-serif;text-align:center;padding:24px}
+a{color:#3b82ff}
+</style>
+</head>
+<body>
+<p>Taking you to the store… <a href="store.html">Open the store</a></p>
+</body>
+</html>

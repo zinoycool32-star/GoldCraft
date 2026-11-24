@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/store/ranks/:slug", "destination": "/store.html?page=ranks&item=:slug" },
+    { "source": "/store/ranks", "destination": "/store.html?page=ranks" },
+    { "source": "/store/:page/:slug", "destination": "/store.html?page=:page&item=:slug" },
+    { "source": "/store/:page", "destination": "/store.html?page=:page" },
+    { "source": "/store", "destination": "/store.html?page=all" }
+  ]
+}

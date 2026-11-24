@@ -1,0 +1,197 @@
+{
+  "_help": "store.json = everything you sell on the store. Prices, perks, coin packs, crate keys, page words and page colours all live here. Copy a { } block to add an item, delete a block to remove one. config.json has the server name, IP and Discord link; site.json has the homepage settings.",
+
+  "currency": {
+    "_help": "The money players can pay in. 'rate' = how many of this currency equal 1 unit of 'base'. 'decimals' = digits after the decimal point (0 shows ₹449, 2 shows $4.99).",
+    "default": "INR",
+    "base": "INR",
+    "options": {
+      "INR": { "label": "INR", "symbol": "₹", "decimals": 0, "rate": 1 },
+      "USD": { "label": "USD", "symbol": "$", "decimals": 2, "rate": 0.012 }
+    }
+  },
+
+  "scroll": {
+    "_help": "'enabled': false freezes the store page (no background colour shift, no fade-ins). 'colourShift' moves the background colour as you scroll. 'reveal' fades cards and headings in as they reach the screen.",
+    "enabled": true,
+    "colourShift": true,
+    "reveal": true
+  },
+
+  "redirect": {
+    "_help": "Where 'Buy now' / 'Continue to payment' sends players when the item has no orderLink of its own. Leave it empty to use the Discord link from config.json.",
+    "defaultOrderLink": ""
+  },
+
+  "pages": {
+    "_help": "One block per store page. 'navLabel' = the tab name in the store menu. 'colour' = the colour of the whole page (a name like gold, purple, blue or a hex value; empty = the site colour from config.json). 'cards' (coins and keys) are the packs for sale.",
+
+    "ranks": {
+      "navLabel": "Ranks",
+      "colour": "",
+      "title": "Ranks",
+      "subtitle": "Support the server and unlock ranks, perks and cosmetics for your account.",
+      "boardTitle": "Available ranks",
+      "boardText": "Every rank is applied automatically within a few minutes.",
+      "note": "Ranks are applied automatically within a few minutes of payment. Need help? Ask in Discord.",
+      "buttonText": "Order Now",
+      "orderLink": ""
+    },
+
+    "coins": {
+      "navLabel": "Coins",
+      "colour": "gold",
+      "title": "Coins",
+      "subtitle": "Top up your in-game balance and spend it in player shops, auctions and cosmetics.",
+      "boardTitle": "Coin packs",
+      "boardText": "Coins are added to your account automatically after payment.",
+      "note": "",
+      "buttonText": "Buy coins",
+      "cards": [
+        {
+          "name": "1,000 coins",
+          "amount": "1K",
+          "image": "assets/coin.png",
+          "price": { "INR": 99, "USD": 0.99 },
+          "colour": "gold",
+          "tagline": "A small top-up for everyday shopping.",
+          "perks": ["1,000 in-game coins", "Added to your balance instantly"],
+          "featured": false,
+          "badge": ""
+        },
+        {
+          "name": "5,000 coins",
+          "amount": "5K",
+          "image": "assets/coin.png",
+          "price": { "INR": 399, "USD": 4.99 },
+          "colour": "#eab308",
+          "tagline": "Most popular pack with bonus coins.",
+          "perks": ["5,000 in-game coins", "+500 bonus coins"],
+          "featured": true,
+          "badge": "Popular"
+        },
+        {
+          "name": "12,000 coins",
+          "amount": "12K",
+          "image": "assets/coin.png",
+          "price": { "INR": 799, "USD": 9.99 },
+          "colour": "orange",
+          "tagline": "Best value for regular players.",
+          "perks": ["12,000 in-game coins", "+2,000 bonus coins"],
+          "featured": false,
+          "badge": "Best value"
+        }
+      ]
+    },
+
+    "keys": {
+      "navLabel": "Keys",
+      "colour": "purple",
+      "title": "Crate keys",
+      "subtitle": "Open crates for cosmetics, gear and rare collectables. Keys are delivered to your account.",
+      "boardTitle": "Crate key bundles",
+      "boardText": "Keys work on every crate in the lobby - common, rare and legendary.",
+      "note": "",
+      "buttonText": "Buy keys",
+      "cards": [
+        {
+          "name": "3 crate keys",
+          "amount": "x3",
+          "image": "assets/key.png",
+          "price": { "INR": 149, "USD": 1.99 },
+          "colour": "purple",
+          "tagline": "Try your luck on the common crate.",
+          "perks": ["3 common crate keys", "Works on all crates"],
+          "featured": false,
+          "badge": ""
+        },
+        {
+          "name": "10 crate keys",
+          "amount": "x10",
+          "image": "assets/key.png",
+          "price": { "INR": 399, "USD": 4.99 },
+          "colour": "#a855f7",
+          "tagline": "A solid bundle with a bonus key.",
+          "perks": ["10 common crate keys", "+1 bonus key"],
+          "featured": true,
+          "badge": "Best value"
+        },
+        {
+          "name": "25 crate keys",
+          "amount": "x25",
+          "image": "assets/key.png",
+          "price": { "INR": 899, "USD": 11.99 },
+          "colour": "magenta",
+          "tagline": "For serious crate openers.",
+          "perks": ["25 common crate keys", "+5 legendary crate keys"],
+          "featured": false,
+          "badge": "Collector"
+        }
+      ]
+    }
+  },
+
+  "_ranksHelp": "Ranks are text only - no artwork is shown on rank cards or the rank detail page. Copy a rank block { ... } to add another rank and delete a block to remove one. 'colour' can be a name (red, blue, green, teal, gold, ...) or any hex value such as #22c55e. 'price' can be per currency, one plain number in the base currency, or ready-made text like \"$4.99\". 'featured': true makes it the most popular rank. 'orderLink' is optional - leave it empty to use redirect.defaultOrderLink, then your Discord link.",
+
+  "ranks": [
+    {
+      "name": "VIP",
+      "price": { "INR": 449, "USD": 4.99 },
+      "colour": "gold",
+      "tagline": "A perfect first step to support the server.",
+      "perks": [
+        "Coloured name in chat",
+        "2 extra /home slots",
+        "/fly in the lobby",
+        "VIP role in Discord"
+      ],
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "name": "VIP+",
+      "price": { "INR": 749, "USD": 7.99 },
+      "colour": "#a855f7",
+      "tagline": "More homes, more commands, more fun.",
+      "perks": [
+        "Everything in VIP",
+        "5 extra /home slots",
+        "Access to /workbench and /enderchest",
+        "Priority queue when the server is full",
+        "Monthly cosmetic crate"
+      ],
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "name": "MVP",
+      "price": { "INR": 899, "USD": 9.99 },
+      "colour": "blue",
+      "tagline": "Stand out everywhere you go.",
+      "perks": [
+        "Everything in VIP+",
+        "Exclusive MVP chat prefix",
+        "Custom join message",
+        "Extra claim blocks",
+        "MVP role in Discord"
+      ],
+      "featured": true,
+      "badge": "Best value"
+    },
+    {
+      "name": "GOD",
+      "price": { "INR": 1799, "USD": 19.99 },
+      "colour": "red",
+      "tagline": "The full package for serious players.",
+      "perks": [
+        "Everything in MVP",
+        "Unlimited /home slots",
+        "Cosmetic pet and particle trail",
+        "Early access to new features",
+        "Private support channel in Discord"
+      ],
+      "featured": false,
+      "badge": "Ultimate"
+    }
+  ]
+}

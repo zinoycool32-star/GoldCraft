@@ -1,0 +1,4 @@
+# Pretty store URLs: /store, /store/ranks, /store/coins, /store/keys
+# and rank detail pages such as /store/ranks/vip
+/store      /store.html?page=all   200
+/store/*    /store.html   200
