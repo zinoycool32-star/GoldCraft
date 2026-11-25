@@ -179,8 +179,8 @@
       "badge": "Best value"
     },
     {
-      "name": "GOD",
-      "price": { "INR": 1799, "USD": 19.99 },
+      "name": "Admin",
+      "price": { "INR": 1799, "USD": 89.99 },
       "colour": "red",
       "tagline": "The full package for serious players.",
       "perks": [
