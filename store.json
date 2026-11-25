@@ -3,10 +3,10 @@
 
   "currency": {
     "_help": "The money players can pay in. 'rate' = how many of this currency equal 1 unit of 'base'. 'decimals' = digits after the decimal point (0 shows ₹449, 2 shows $4.99).",
-    "default": "INR",
-    "base": "INR",
+    "default": "Dz",
+    "base": "Dz",
     "options": {
-      "INR": { "label": "INR", "symbol": "₹", "decimals": 0, "rate": 1 },
+      "INR": { "label": "Dz", "symbol": "€", "decimals": 0, "rate": 1 },
       "USD": { "label": "USD", "symbol": "$", "decimals": 2, "rate": 0.012 }
     }
   },
@@ -52,7 +52,7 @@
           "name": "1,000 coins",
           "amount": "1K",
           "image": "assets/coin.png",
-          "price": { "INR": 99, "USD": 0.99 },
+          "price": { "Dz" 250: , "USD": 0.99 },
           "colour": "gold",
           "tagline": "A small top-up for everyday shopping.",
           "perks": ["1,000 in-game coins", "Added to your balance instantly"],
@@ -63,7 +63,7 @@
           "name": "5,000 coins",
           "amount": "5K",
           "image": "assets/coin.png",
-          "price": { "INR": 399, "USD": 4.99 },
+          "price": { "Dz": 1250, "USD": 4.99 },
           "colour": "#eab308",
           "tagline": "Most popular pack with bonus coins.",
           "perks": ["5,000 in-game coins", "+500 bonus coins"],
@@ -74,7 +74,7 @@
           "name": "12,000 coins",
           "amount": "12K",
           "image": "assets/coin.png",
-          "price": { "INR": 799, "USD": 9.99 },
+          "price": { "Dz": 2500, "USD": 9.99 },
           "colour": "orange",
           "tagline": "Best value for regular players.",
           "perks": ["12,000 in-game coins", "+2,000 bonus coins"],
@@ -98,7 +98,7 @@
           "name": "3 crate keys",
           "amount": "x3",
           "image": "assets/key.png",
-          "price": { "INR": 149, "USD": 1.99 },
+          "price": { "Dz": 495, "USD": 1.99 },
           "colour": "purple",
           "tagline": "Try your luck on the common crate.",
           "perks": ["3 common crate keys", "Works on all crates"],
@@ -109,7 +109,7 @@
           "name": "10 crate keys",
           "amount": "x10",
           "image": "assets/key.png",
-          "price": { "INR": 399, "USD": 4.99 },
+          "price": { "Dz": 1250, "USD": 4.99 },
           "colour": "#a855f7",
           "tagline": "A solid bundle with a bonus key.",
           "perks": ["10 common crate keys", "+1 bonus key"],
@@ -120,7 +120,7 @@
           "name": "25 crate keys",
           "amount": "x25",
           "image": "assets/key.png",
-          "price": { "INR": 899, "USD": 11.99 },
+          "price": { "Dz": 3000, "USD": 11.99 },
           "colour": "magenta",
           "tagline": "For serious crate openers.",
           "perks": ["25 common crate keys", "+5 legendary crate keys"],
@@ -136,7 +136,7 @@
   "ranks": [
     {
       "name": "VIP",
-      "price": { "INR": 449, "USD": 4.99 },
+      "price": { "Dz": 1250, "USD": 4.99 },
       "colour": "gold",
       "tagline": "A perfect first step to support the server.",
       "perks": [
@@ -150,7 +150,7 @@
     },
     {
       "name": "VIP+",
-      "price": { "INR": 749, "USD": 7.99 },
+      "price": { "Dz": 750, "USD": 7.99 },
       "colour": "#a855f7",
       "tagline": "More homes, more commands, more fun.",
       "perks": [
@@ -165,7 +165,7 @@
     },
     {
       "name": "MVP",
-      "price": { "INR": 899, "USD": 9.99 },
+      "price": { "Dz": 1250, "USD": 9.99 },
       "colour": "blue",
       "tagline": "Stand out everywhere you go.",
       "perks": [
@@ -179,8 +179,8 @@
       "badge": "Best value"
     },
     {
-      "name": "GOD",
-      "price": { "INR": 1799, "USD": 19.99 },
+      "name": "Admin",
+      "price": { "Dz": 3500, "USD": 19.99 },
       "colour": "red",
       "tagline": "The full package for serious players.",
       "perks": [
